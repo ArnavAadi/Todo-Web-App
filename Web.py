@@ -2,8 +2,8 @@ import streamlit as st
 import functions
 
 def add_todo():
-    new_todo = st.session_state["new_todo"]
-    todos.append(new_todo + "\n")
+    new_todo = st.session_state["new_todo"] + "\n"
+    todos.append(new_todo)
     with open("todos.txt", "w") as file_write:
         file_write.writelines(todos)
 
