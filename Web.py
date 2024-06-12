@@ -13,7 +13,9 @@ todos = functions.get_todos()
 
 st.title("My Todo App")
 st.subheader("This is my very own Todo App")
-st.write("This is made to increase my productivity")
+st.write("This is made to increase my <b>Productivity</b>", unsafe_allow_html=True)
+
+st.text_input(label="-", placeholder="Add new Todo....",on_change=add_todo, key='new_todo')
 
 
 for index, todo in enumerate(todos):
@@ -26,4 +28,3 @@ for index, todo in enumerate(todos):
         st.experimental_rerun()
 
 
-st.text_input(label="-", placeholder="Add new Todo....",on_change=add_todo, key='new_todo')
